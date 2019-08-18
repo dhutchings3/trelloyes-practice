@@ -1,16 +1,16 @@
 import React from 'react';
-import STORE from './Store.js';
+import './Card.css';
 
-function Card(STORE) {
-    for (i=0; i > STORE.List.length; i++) {
+export default function Card(props) {
   return (
-    <div class="Card">
-    <button type="button">delete</button>
-    <h3>{STORE.List.title}</h3>
-    <p>{STORE.List.content}</p>
-  </div>
-  );
+    <div className='Card'>
+      <button
+        type='button'
+      >
+        delete
+      </button>
+      <h3>{props.title}</h3>
+      <p>{props.content}</p>
+    </div>
+  )
 }
-};
-
-export default Card;
